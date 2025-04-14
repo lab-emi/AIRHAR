@@ -27,7 +27,7 @@ def prepare_glasgow_dataset(path):
     X =X[:,:240,:]
         # # Normalize X: scale to [0, 1] range for each sample independently
     X = np.array([
-        (spec - spec.min()) / (spec.max() - spec.min())
+        (spec - spec.mean()) / (spec.std())
         for spec in X
     ])
     # Save spectrograms as images and reload them with specific dimensions

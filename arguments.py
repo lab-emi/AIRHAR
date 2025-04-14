@@ -54,6 +54,7 @@ def get_arguments():
     parser.add_argument('--channel_confusion_layer', default=1, type=int, help='Number of channel confusion layers.')
     parser.add_argument('--channel_confusion_out_channels', default=3, type=int, help='Kernel size of the channel confusion layer.')
     parser.add_argument('--time_downsample_factor', default=2, type=int, help='Downsample factor of the channel confusion layer.')
+    parser.add_argument('--optional_avg_pool', default=False, type=bool, help='Whether to use optional avg pool.')
     parser.add_argument('--dim', default=80, type=int, help='Dimension of the transformer model.')
     parser.add_argument('--dt_rank', default=0, type=int, help='Rank of the dynamic routing matrix.')
     parser.add_argument('--d_state', default=4, type=int, help='Dimension of the state vector.')

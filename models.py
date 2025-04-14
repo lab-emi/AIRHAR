@@ -10,7 +10,7 @@ from typing import Any, cast, Dict, List, Optional, Union
 
 
 class CoreModel(nn.Module):
-    def __init__(self, hidden_size, num_layers, backbone_type, dim, dt_rank, d_state, image_height, image_width,num_classes, channels, dropout, channel_confusion_layer, channel_confusion_out_channels, time_downsample_factor):
+    def __init__(self, hidden_size, num_layers, backbone_type, dim, dt_rank, d_state, image_height, image_width,num_classes, channels, dropout, optional_avg_pool, channel_confusion_layer, channel_confusion_out_channels, time_downsample_factor):
         super(CoreModel, self).__init__()
         self.output_size = 1  
         self.hidden_size = hidden_size
@@ -69,6 +69,7 @@ class CoreModel(nn.Module):
                 channel_confusion_layer=channel_confusion_layer,
                 channel_confusion_out_channels=channel_confusion_out_channels,
                 time_downsample_factor=time_downsample_factor,
+                optional_avg_pool=optional_avg_pool
             )
 
         else:

@@ -41,7 +41,8 @@ def main(proj: Project):
                           dropout=proj.dropout,
                           channel_confusion_layer=proj.channel_confusion_layer,
                           channel_confusion_out_channels=proj.channel_confusion_out_channels,
-                          time_downsample_factor=proj.time_downsample_factor)
+                          time_downsample_factor=proj.time_downsample_factor,
+                          optional_avg_pool=proj.optional_avg_pool)
     net_classifier_params = count_net_params(net_classifier)
     print("::: Number of DPD Model Parameters: ", net_classifier_params)
     classifier_model_id = proj.gen_classifier_model_id(net_classifier_params)

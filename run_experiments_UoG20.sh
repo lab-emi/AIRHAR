@@ -3,13 +3,18 @@
 
 
 # Array of d_state values to test
-hidden_size_values_radmamba=(8 16 20 24 32)
-hidden_size_values_resnet=(5 7 12 20 30)
-hidden_size_values_cnnlstm=(2 4 6 16 28 34 46)
-hidden_size_values_bilstm=(1 2 4 10 20 28 34)
-hidden_size_values_cnngru=(1 2 4 6 16 28)
+# hidden_size_values_radmamba=(8 16 20 24 32)
+# hidden_size_values_resnet=(5 7 12 20 30)
+# hidden_size_values_cnnlstm=(2 4 6 16 28 34 46)
+# hidden_size_values_bilstm=(1 2 4 10 20 28 34)
+# hidden_size_values_cnngru=(1 2 4 6 16 28)
 
 
+hidden_size_values_radmamba=(16)
+hidden_size_values_resnet=(5)
+hidden_size_values_cnnlstm=(2)
+hidden_size_values_bilstm=(1)
+hidden_size_values_cnngru=(1)
 
 # # Run for 10 different random seeds (0-9)
 for seed in {0..9}; do

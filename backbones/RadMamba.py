@@ -252,6 +252,7 @@ class RadMamba(nn.Module):
         channel_confusion_layer: int = 1,
         channel_confusion_out_channels: int = 3,
         time_downsample_factor: int = 4,
+        optional_avg_pool: bool = False,
         *args,
         **kwargs,
     ):
@@ -269,6 +270,7 @@ class RadMamba(nn.Module):
         self.cd_out_channels = channel_confusion_out_channels
         self.cd_layer = channel_confusion_layer
         self.td_factor = time_downsample_factor
+        self.optional_avg_pool = optional_avg_pool
         self.batch_norm = nn.BatchNorm2d(channels)
         if channel_confusion_layer == 2:
             self.CNN = nn.Sequential(nn.Conv2d(channels, self.cd_out_channels, kernel_size=3, padding=1),
@@ -287,10 +289,12 @@ class RadMamba(nn.Module):
             self.CNN = nn.Sequential(nn.Conv2d(channels, self.cd_out_channels, kernel_size=3, padding=1),
                                      nn.BatchNorm2d(self.cd_out_channels),
                                      nn.MaxPool2d(kernel_size=2, stride=2),
-                                     nn.MaxPool2d(kernel_size=(1,self.td_factor), stride=(1,self.td_factor)),
-        )
-            h_factor = 2
+                                     nn.MaxPool2d(kernel_size=(1,self.td_factor), stride=(1,self.td_factor)))
             w_factor = self.td_factor*2
+            if self.optional_avg_pool:
+                self.CNN.append(nn.AvgPool2d(kernel_size=(1,self.td_factor), stride=(1,self.td_factor)))
+                w_factor = self.td_factor*2*self.td_factor
+            h_factor = 2
             image_height = int((image_height)/h_factor)  # Updated due to vertical pooling
             image_width = int((image_width)/w_factor)
             channels = self.cd_out_channels         

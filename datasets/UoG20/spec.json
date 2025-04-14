@@ -15,7 +15,6 @@
         "devices": 0,
         "re_level": "soft",
 
-        "seed": 0,
         "loss_type": "CrossEntropy",
         "opt_type": "adamw",
         "batch_size": 256,
@@ -32,11 +31,11 @@
         "Classification_hidden_size": 64,
         "Classification_num_layers": 1,
 
-        "dim": 16,
         "dt_rank": 4,
         "d_state": 16,
         "dropout": 0,
         "channel_confusion_layer": 1,
         "channel_confusion_out_channels": 1,
-        "time_downsample_factor": 16
+        "time_downsample_factor": 4,
+        "optional_avg_pool": true
 }
