@@ -1,0 +1,36 @@
+{
+    "dataset_name": "DIAT",
+    "num_classes": 6,
+    
+    "channels": 3,
+    "image_height": 224,
+    "frame_length": 224,
+    "stride": 1,
+    "continuous": false,
+    "log_precision": 8,
+   
+    "accelerator": "cuda",
+    "devices": 0,
+    "re_level": "soft",
+    "loss_type": "WeightedCrossEntropy",
+
+    
+    
+    "batch_size": 16,
+    "batch_size_eval": 16,
+    "n_epochs": 50,
+    "lr_schedule": 1,
+    "lr": 1e-4,
+    "lr_end": 1e-6,
+    "decay_factor": 0.5,
+    "patience": 15,
+    "grad_clip_val": 200,
+    
+    
+    "dt_rank": 2,
+    "d_state": 1,
+    "dropout": 0,
+    "channel_confusion_layer": 2,
+    "channel_confusion_out_channels": 16,
+    "time_downsample_factor": 1
+}

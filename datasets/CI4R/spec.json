@@ -1,0 +1,38 @@
+{
+        "dataset_name": "CI4R",
+        "num_classes": 11,
+        "channels": 1,
+        "image_height": 224,
+        "frame_length": 224,
+        "stride": 1,
+        "continuous": false,
+        
+        "eval_val": 0,
+        "eval_test": 1,
+        "accelerator": "cuda",
+        "devices": 0,
+        "re_level": "soft",
+
+        "loss_type": "CrossEntropy",
+        "opt_type": "adamw",
+        "batch_size": 16,
+        "batch_size_eval": 16,
+        "n_epochs": 100,
+        "lr_schedule": 1,
+        "lr": 5e-3,
+        "lr_end": 1e-6,
+        "decay_factor": 0.5,
+        "patience": 15,
+        "grad_clip_val": 200,
+
+        "Classification_backbone": "radmamba",
+        "Classification_hidden_size": 64,
+        "Classification_num_layers": 1,
+
+        "dt_rank": 0,
+        "d_state": 4,
+        "dropout": 0,
+        "channel_confusion_layer": 1,
+        "channel_confusion_out_channels": 1,
+        "time_downsample_factor": 4
+    }

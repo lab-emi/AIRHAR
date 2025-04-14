@@ -1,0 +1,42 @@
+{
+        "dataset_name": "UoG20",
+        "num_classes": 6,
+        "channels": 1,
+        "image_height": 240,
+        "frame_length": 224,
+        "stride": 1,
+        "continuous": true,
+        "log_precision": 8,
+        
+        "step": "classify",
+        "eval_val": 0,
+        "eval_test": 1,
+        "accelerator": "cuda",
+        "devices": 0,
+        "re_level": "soft",
+
+        "seed": 0,
+        "loss_type": "CrossEntropy",
+        "opt_type": "adamw",
+        "batch_size": 256,
+        "batch_size_eval": 256,
+        "n_epochs": 50,
+        "lr_schedule": 1,
+        "lr": 5e-5,
+        "lr_end": 1e-6,
+        "decay_factor": 0.5,
+        "patience": 15,
+        "grad_clip_val": 200,
+
+        "Classification_backbone": "radmamba",
+        "Classification_hidden_size": 64,
+        "Classification_num_layers": 1,
+
+        "dim": 16,
+        "dt_rank": 4,
+        "d_state": 16,
+        "dropout": 0,
+        "channel_confusion_layer": 1,
+        "channel_confusion_out_channels": 1,
+        "time_downsample_factor": 16
+}
