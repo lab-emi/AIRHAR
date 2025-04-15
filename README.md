@@ -1,4 +1,4 @@
-# AIHAR
+# AIRHAR
 **AIRHAR** is a learning framework built in PyTorch for radar-based human activity recognition. Developed by the [Lab of Efficient Machine Intelligence](https://www.tudemi.com) @ Delft University of Technology, AIRHAR aims to bridge the gap between machine learning and signal processing of radar system.
 
 The framework provides a comprehensive solution for training neural network models to classify non-continuous and continuous human acivities. By leveraging state-of-the-art deep learning techniques, AIRHAR enables researchers and engineers to develop more energy-efficient wireless communication systems.
@@ -65,12 +65,13 @@ pip3 install torch torchvision torchaudio
 
 ## Reproducing Published Results
 ### Data Downloads
-Please follow the instruction fro
+Please follow the instructions fro
 #### Non-continuous CW Dataset (DIAT)
 https://ieee-dataport.org/documents/diat-μradhar-radar-micro-doppler-signature-dataset-human-suspicious-activity-recognition
 #### Non-continuous FMCW Dataset (CI4R)
 https://github.com/ci4r/CI4R-Activity-Recognition-datasets
 #### Continuous FMCW Dataset (UoG20)
+UoG2020 dataset from Glasgow is being prepared for integration into the existing collection at  https://researchdata.gla.ac.uk/848/. 
 
 
 ### Data Preparation
