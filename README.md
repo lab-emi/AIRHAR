@@ -5,6 +5,8 @@ The framework provides a comprehensive solution for training neural network mode
 
 We invite you to contribute to this project by providing your own backbone neural networks, pre-trained models, or measured radar-based human activities/gesture datasets.
 
+Our latest work: [RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model](https://arxiv.org/abs/2504.12039)
+
 # Project Structure
 ```
 .
@@ -94,7 +96,18 @@ These scripts train various classifier models across model sizes.
 
 # Authors & Citation
 If you find this repository helpful, please cite our work:
-
+- [RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model](https://arxiv.org/abs/2504.12039)
+```
+@misc{wu2025radmambaefficienthumanactivity,
+      title={RadMamba: Efficient Human Activity Recognition through Radar-based Micro-Doppler-Oriented Mamba State-Space Model}, 
+      author={Yizhuo Wu and Francesco Fioranelli and Chang Gao},
+      year={2025},
+      eprint={2504.12039},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.12039}, 
+}
+```
 
 # Contributors
 
