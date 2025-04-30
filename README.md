@@ -1,4 +1,4 @@
-# AIRHAR
+# AIRHAR (RadMamba)
 **AIRHAR** is a learning framework built in PyTorch for radar-based human activity recognition. Developed by the [Lab of Efficient Machine Intelligence](https://www.tudemi.com) @ Delft University of Technology, AIRHAR aims to bridge the gap between machine learning and signal processing of radar system.
 
 The framework provides a comprehensive solution for training neural network models to classify non-continuous and continuous human acivities. By leveraging state-of-the-art deep learning techniques, AIRHAR enables researchers and engineers to develop more energy-efficient wireless communication systems.
